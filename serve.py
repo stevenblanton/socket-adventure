@@ -17,6 +17,8 @@ try:
 except IndexError:
     print("Please include a port number, eg: python serve.py 50000")
     exit(-1)
+except KeyError:
+    print("Invalid input! Try move, say or quit")
 
 server = Server(port)
 server.serve()
